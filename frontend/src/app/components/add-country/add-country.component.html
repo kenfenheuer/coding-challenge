@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div *ngIf="!submitted">
+        <form [formGroup]="countryForm" #formDirective="ngForm" (ngSubmit)="onSubmit(formDirective)" novalidate>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" id="name">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Country-Code</mat-label>
+                    <input matInput formControlName="countrycode" id="countrycode">
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-flat-button color="primary" type="submit" [disabled]="!countryForm.valid">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="submitted">
+        <mat-card>Das Land wurde erfolgreich angelegt</mat-card>
+    </div>
+</div>

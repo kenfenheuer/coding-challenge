@@ -1,0 +1,26 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .active-list-item {
+    color: #ffffff !important; /* Note: You could also use a custom theme */
+  }
+  .mat-list-item {
+    float: right;
+  }
+
+  a {
+      color: grey;
+      text-decoration: none;
+  } a:hover {
+      text-decoration: none;
+      color: lightgrey;
+  }
+
+
+  mat-toolbar {
+    height: 50px;
+    position: fixed;
+    position: -webkit-fixed; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
